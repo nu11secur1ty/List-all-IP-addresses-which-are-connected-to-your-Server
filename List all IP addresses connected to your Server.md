@@ -137,13 +137,13 @@ Done.
 This is optional, to display the first 10 result.
 References
 
-   1 /dev/null
-   2 Netstat
-   3 AWK
-   4 Cut
-   5 Uniq
-   6 Sort
-   7 Optional: 
+   1. /dev/null
+   2. Netstat
+   3. AWK
+   4. Cut
+   5. Uniq
+   6. Sort
+   7. Optional: 
      Listening ports and...
 ```
 netstat -tulpn
