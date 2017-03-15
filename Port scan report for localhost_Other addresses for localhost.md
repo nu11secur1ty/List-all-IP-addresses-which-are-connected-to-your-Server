@@ -16,6 +16,6 @@ show string or an integer in localhost, which you want to see.
 Port range which you want to search and see.
 
 # '1|1000'
-You must input your ports which you searching
+You must input a range of ports which you searching
 
 # Have fun with nu11secur1ty =)
