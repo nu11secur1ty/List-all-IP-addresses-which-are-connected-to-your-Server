@@ -1,4 +1,4 @@
-# scan report for localhost_Other addresses for localhost
+# Port scan report for localhost_Other addresses for localhost
 
 ```
 nmap localhost | grep -P '80|100'
