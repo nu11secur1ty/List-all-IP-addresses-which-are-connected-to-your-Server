@@ -11,5 +11,13 @@ curl -w '\n' ident.me
 ```
 curl ifconfig.me
 ```
+4.
+```
+ifconfig && ccurl ipecho.net/plain ; echo
+```
+5.
+```
+ip addr && curl ipecho.net/plain ; echo
+```
 
 # Have fun with nu11secur1ty =)
