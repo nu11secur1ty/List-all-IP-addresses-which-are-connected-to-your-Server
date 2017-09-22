@@ -11,6 +11,7 @@ curl -w '\n' ident.me
 ```
 curl ifconfig.me
 ```
+# Check for inside/outside IP
 4.
 ```
 ifconfig && ccurl ipecho.net/plain ; echo
