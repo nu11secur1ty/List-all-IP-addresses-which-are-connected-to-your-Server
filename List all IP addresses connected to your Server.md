@@ -157,11 +157,15 @@ netstat -tulpn
 ```bash
 netstat -ano
 ```
-# Retrieve all TCP connections
+# Retrieve all TCP connections and PIDS
 ```bash
 lsof -n -itcp | head -4
+lsof -n -itcp 
 ```
 - 4 head number
+
+
+
 
 # Have fun with nu11secur1ty =)
 
