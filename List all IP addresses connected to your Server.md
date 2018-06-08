@@ -4,7 +4,7 @@
 
 Below is an Unix command to list all the IP addresses connected to your server on port 80.
 
-```
+```bash
 netstat -tn 2>/dev/null | grep :80 | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head
 netstat -tn 2>/dev/null | grep 80
 netstat -tn 2>/dev/null | grep 22
@@ -14,7 +14,7 @@ netstat -tn 2>/dev/null | grep 53
 
 Output example – Total connections by IP, from highest to lowest.
 
-```
+```xml
 97 114.198.236.100
 56 67.166.157.194
 44 170.248.43.76
@@ -43,7 +43,7 @@ Uses netstat to list all network connections, ins and outs.
 Output:
 
 
-```
+```bash
 # Examples - 7 connections
 tcp        0      0 64.91.*.*:80            114.198.236.100:12763       TIME_WAIT
 tcp        0      0 64.91.*.*:80            175.136.226.244:51950       TIME_WAIT
@@ -54,7 +54,7 @@ tcp        0      0 64.91.*.*:80            114.198.236.100:44088       ESTABLIS
 tcp        0      0 64.91.*.*:80            175.136.226.244:51952       TIME_WAIT
 ```
 
-```
+```bash
 # 2>/dev/null
 Redirect all unwanted output to /dev/null, a special place to absorb all output and clear it.
 ```
@@ -64,7 +64,7 @@ Redirect all unwanted output to /dev/null, a special place to absorb all output 
 Only display the IP address that connected to server on port 80. 
 example:
 
-```
+```bash
 tcp        0      0 64.91.*.*:80            114.198.236.100:12763       TIME_WAIT
 tcp        0      0 64.91.*.*:80            175.136.226.244:51950       TIME_WAIT
 tcp        0      0 64.91.*.*:80            175.136.226.244:51951       TIME_WAIT
@@ -76,7 +76,7 @@ tcp        0      0 64.91.*.*:80            175.136.226.244:51952       TIME_WAI
 
 Uses awk to display the 5th field only.
 
-```
+```xml
 114.198.236.100:12763
 175.136.226.244:51950
 175.136.226.244:51951
@@ -93,7 +93,7 @@ Uses cut to extract the content.
    1. -d – Character immediately following the -d option is use as delimiter, default is tab.
    2. -f – Specifies a field list, separated by a delimiter.
 
-```
+```xml
 114.198.236.100
 175.136.226.244
 175.136.226.244
@@ -108,7 +108,7 @@ Sort the list, group it and sort it again in reverse order.
 
 sort
 
-```
+```xml
 114.198.236.100
 114.198.236.100
 149.238.193.121
@@ -119,7 +119,7 @@ sort
 
 uniq -c – Group it.
 
-```
+```xml
 2 114.198.236.100
 1 149.238.193.121
 3 175.136.226.244
@@ -128,7 +128,7 @@ uniq -c – Group it.
 sort -nr – sort by numeric, and reverse order (highest display first)
 
 
-```
+```xml
 3 175.136.226.244
 2 114.198.236.100
 1 149.238.193.121
@@ -149,8 +149,13 @@ References
    6. Sort
    7. Optional: 
      Listening ports and...
-```
+```bash
 netstat -tulpn
+```
+
+# Displays active TCP connections
+```bash
+netstat -ano
 ```
 
 # Have fun with nu11secur1ty =)
