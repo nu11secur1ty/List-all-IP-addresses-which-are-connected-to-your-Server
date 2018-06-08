@@ -6,10 +6,10 @@ Below is an Unix command to list all the IP addresses connected to your server o
 
 ```
 netstat -tn 2>/dev/null | grep :80 | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head
-netstat -tn 2>/dev/null | grep :80
-netstat -tn 2>/dev/null | grep :22
-netstat -tn 2>/dev/null | grep :23
-netstat -tn 2>/dev/null | grep :53
+netstat -tn 2>/dev/null | grep 80
+netstat -tn 2>/dev/null | grep 22
+netstat -tn 2>/dev/null | grep 23
+netstat -tn 2>/dev/null | grep 53
 ```
 
 Output example – Total connections by IP, from highest to lowest.
