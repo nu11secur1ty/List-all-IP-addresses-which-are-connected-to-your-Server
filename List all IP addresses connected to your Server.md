@@ -157,6 +157,11 @@ netstat -tulpn
 ```bash
 netstat -ano
 ```
+# Retrieve all TCP connections
+```bash
+lsof -n -itcp | head -4
+```
+- 4 head number
 
 # Have fun with nu11secur1ty =)
 
