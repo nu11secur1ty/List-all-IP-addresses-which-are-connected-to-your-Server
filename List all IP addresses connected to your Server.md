@@ -28,6 +28,12 @@ Output example – Total connections by IP, from highest to lowest.
 ```
 
 
+Below is an Unix command to list all the IP addresses connected to your server on all ports.
+
+```bash
+netstat -tn 2>/dev/null | awk '{print $5}' | cut -d: -f1 | sort | uniq -c | sort -nr | head
+```
+
 # Note
 This command is useful to detect if your server is under attack, and null route those IPs. Read this null route attacker IP story.
 
